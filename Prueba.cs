@@ -2,28 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Prueba : MonoBehaviour
-{
-
-    // Start is called before the first frame update
-    void Start()
-    {
+public class Prueba : MonoBehaviour {
+    void Start() {
         gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnTargetTracked() {
-        Debug.Log("JAJA");
+        Debug.Log("Tracked" + gameObject.name);
         gameObject.SetActive(true);
     }
 
     public void OnTargetUntracked() {
-        Debug.Log("JEJE");
+        Debug.Log("Untracked" + gameObject.name);
         gameObject.SetActive(false);
     }
 }
